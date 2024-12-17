@@ -5,7 +5,7 @@ We want to be able to change the theme without changing the web application.
 
 The Bridge pattern allows us to do this.
 
-We create the abstration, which is our framework that can create the different web applications. 
+We create the abstration, which is our WebApp that can extend into different types of web applications.
 
 We then create out implementatino interface that defines the methods that the concrete implementations must implement.
 
@@ -17,7 +17,7 @@ When we want to change the theme, we change the concrete implementation.
 
 This allows us to change the theme without changing the web application, as a bonus this allows us to change the theme at runtime.
 
-When we want to add a new web application we add a new method to the framework and update the concrete implementations to support the new web application.
+When we want to add a new web application we create a new class that extends the WebApp class.
 
 When we want to add a new theme we add a new concrete implementation.
 
